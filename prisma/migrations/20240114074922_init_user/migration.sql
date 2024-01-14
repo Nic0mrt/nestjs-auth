@@ -9,5 +9,8 @@ CREATE TABLE "User" (
     CONSTRAINT "User_pkey" PRIMARY KEY ("id")
 );
 
+--insert root admin
+INSERT INTO "User" ("email", "password", "role") VALUES ('admin@example.com', 'securepassword', 'ADMIN');
+
 -- CreateIndex
 CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
